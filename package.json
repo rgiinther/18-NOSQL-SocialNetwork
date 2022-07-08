@@ -1,0 +1,23 @@
+{
+  "name": "18-nosql-socialnetwork",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rgiinther/18-NOSQL-SocialNetwork.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rgiinther/18-NOSQL-SocialNetwork/issues"
+  },
+  "homepage": "https://github.com/rgiinther/18-NOSQL-SocialNetwork#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
