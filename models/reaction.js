@@ -24,8 +24,6 @@ const reactionSchema = new Schema({
     get:(time)=>moment(time).format("MM DD, YY [at] hh:mm a") 
   },
 }
-
-  })
-
+});
 
   module.exports = reactionSchema;
