@@ -16,7 +16,7 @@ const ThoughtController = {
         Thoughts.findOne({ _id: params.id})
         .then(dbThoughtsData => {
             if (!dbThoughtsData) {
-                res.status(404).json({ messafe: 'There is no Thought found with this Id.'});
+                res.status(404).json({ message: 'There is no Thought found with this Id.'});
                 return;
             }
             res.json(dbThoguhtsData);
@@ -49,7 +49,7 @@ const ThoughtController = {
         Thoughts.findOneAndDelete({ _id: params.id })
           .then(dbThoguhtsData => {
             if (!dbThoguhtsData) {
-                res.status(404).json({ messages: 'There is no Thought found with this Id.'});
+                res.status(404).json({ message: 'There is no Thought found with this Id.'});
                 return;
             }
             res.json(dbThoguhtsData);

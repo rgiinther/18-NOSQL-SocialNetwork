@@ -10,7 +10,7 @@ const {
 } = require ('../../controllers/user-controller');
 
 // get all and post @ /api/users
-router.route("/").get(getAllUsers).post(createUser);
+router.route("/").get(getAllUser).post(createUser);
 
 // get by id, add, and delete @ /api/users/:id
 router.route("/:id").get(getUserById).put(updateUser).delete(deleteUser);
