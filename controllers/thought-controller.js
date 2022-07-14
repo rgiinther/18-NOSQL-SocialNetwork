@@ -28,11 +28,26 @@ const ThoughtController = {
     },
     //create
     createThoughts({ body }, res) {
-        Thoughts.create(body)
-        .then(dbThoguhtsData => res.json(dbThoguhtsData))
-        .catch(err => res.json(err));
-    }, 
-    //update
+      console.log(body);
+      Thoughts.create(body)
+        .then((thoughtData) => {
+          return User.findOneAndUpdate(
+            { _id: body.userId },
+            { $push: { thoughts: thoughtData._id } },
+            { new: true }
+          );
+        })
+        .then((dbUserData) => {
+          if (!dbUserData) {
+            res
+              .status(404)
+              .json({ message: "There is no user with this Id" });
+            return;
+          }
+          res.json(dbUserData);
+        })
+        .catch((err) => res.json(err));
+    },
     updateThoughts({ params, body }, res) {
         Thoughts.findOneAndUpdate({ _id: params.id }, body, { new: true, runValidators: true })
           .then(dbThoguhtsData => {
