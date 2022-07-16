@@ -46,7 +46,7 @@ const ThoughtSchema = new Schema (
         createdAt: {
             type: Date,
             default: Date.now,
-            get:(time)=>moment(time).format("MM DD, YY [at] hh:mm a")
+            get:timestamp => dateFormat(timestamp)
         },
         username: {
                 type: String,
@@ -65,7 +65,7 @@ const ThoughtSchema = new Schema (
 
 //get total reaction & reply countt
 ThoughtSchema.virtual("reactionCount").get(function() {
-  return this.reactions.length;
+  return this.reaction.length;
 });
 
 const Thoughts = model("Thought", ThoughtSchema);

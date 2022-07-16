@@ -19,8 +19,9 @@ Github link:
 https://github.com/rgiinther/18-NOSQL-SocialNetwork
 
 Video Link: 
-
-
+server connect: https://www.youtube.com/watch?v=ClapJzwB-0Y
+insomnia check: https://www.youtube.com/watch?v=qIM5SNQdT_4 
+    ran out of time. for last friend delete route. 
 
 Acceptance Criteria: 
 
